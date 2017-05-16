@@ -3,41 +3,70 @@
 <head>
 <style>
 ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color: black;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
 }
 
-li a {
-float: left;
-display: block;
-color: white;
-text-align: center;
-padding: 15px 15px;
-text-decoration: none;
+li a.menu {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 15px;
+	text-decoration: none;
 }
 
-li a:hover {
-background-color: #FF0000
+li a.menu:hover {
+	background-color: #FF0000;
 }
 
-p.sansserif {
+li a.normal {
+	color: black;
+	font-family: Arial;
+	display: inline;
+	text-decoration: underline;
+}
+
+li a.normal:hover {
+	color: blue;
+}
+
+.sansserif {
     font-family: Arial;
 }
+
+.hidden {
+	display: none;
+}
 </style>
+
+<script>
+	function showPic() {
+		document.getElementById('ptrLUL').classList.remove('hidden');
+	}
+	
+	function hidePic() {
+		document.getElementById('ptrLUL').classList.add('hidden');
+	}
+</script>
+
 </head>
 
 <body>
 <ul class="menu">
-  <li><a href="Website Home.html">Home</a></li>
-  <li><a href="index.html">About</a></li>
+  <li><a class="menu" href="Website Home.html">Home</a></li>
+  <li><a class="menu" href="index.html">About</a></li>
 </ul>
 <p class="sansserif">This is a website made by me to get some
 experience working with HTML, CSS and Javascript. This is an 
 independant project that I'll be working on throughout the summer 
 until I find an internship.</p>
-</body>
+<br>
+<p class="hidden" id="ptrLUL"><img src="https://cdn.discordapp.com/emojis/280581423763554304.png" width="300" height="300"></p>
+<button onclick="showPic()">Click here for a random picture</button>
+<button onclick="hidePic()">Click here to hide the picture</button>
 
 </html>
