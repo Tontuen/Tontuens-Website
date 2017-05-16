@@ -14,7 +14,7 @@ ul {
 	font-family: Arial;
 }
 
-li a {
+li a.menu {
 	float: left;
 	display: block;
 	color: white;
@@ -23,17 +23,18 @@ li a {
 	text-decoration: none;
 }
 
-li a:hover {
+li a.menu:hover {
 	background-color: #FF0000;
 }
 
-li b {
+li a.normal {
 	color: black;
-	text-decoration: none;
 	font-family: Arial;
+	display: inline;
+	text-decoration: underline;
 }
 
-li b:hover {
+li a.normal:hover {
 	color: blue;
 }
 
@@ -56,8 +57,8 @@ p {
 
 <body>
 <ul class="menu">
-  <li><a href="Website Home.html">Home</a></li>
-  <li><a href="index.html">About</a></li>
+  <li><a class="menu" href="Website Home.html">Home</a></li>
+  <li><a class="menu" href="index.html">About</a></li>
 </ul>
 <p>A little bit about myself. (This is the index file)
 I'm currently 20 and a 4th year at the University of Toronto Mississauga.
@@ -207,7 +208,8 @@ August 2013 to August 2014)</p>
 	<li>Games (I spend too much time playing games)</li>
 	<li>I also watch anime and read visual novels. Links to
 	profiles can be found here: 
-	<b href="https://myanimelist.net/profile/Cranfin" target="_blank">My anime list</b></li>
+	<a class="normal" href="https://myanimelist.net/profile/Cranfin" target="_blank">My anime list</a>
+	|| <a class="normal" href="https://vndb.org/u55827/list" target="_blank">My visual novel list</a></li>
 </ul>
 </body>
 
