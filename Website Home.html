@@ -27,17 +27,6 @@ li a.menu:hover {
 	background-color: #FF0000;
 }
 
-li a.normal {
-	color: black;
-	font-family: Arial;
-	display: inline;
-	text-decoration: underline;
-}
-
-li a.normal:hover {
-	color: blue;
-}
-
 .sansserif {
     font-family: Arial;
 }
@@ -45,15 +34,28 @@ li a.normal:hover {
 .hidden {
 	display: none;
 }
+
+.hidden:hover {
+	display: inline;
+}
+
+body {
+	background-image: url('http://i.imgur.com/vkPjr9O.jpg');
+	background-size: cover;
+}
+
+p {
+	color: white;
+}
 </style>
 
 <script>
 	function showPic() {
-		document.getElementById('ptrLUL').classList.remove('hidden');
+		document.getElementById('raindrops').classList.remove('hidden');
 	}
 	
 	function hidePic() {
-		document.getElementById('ptrLUL').classList.add('hidden');
+		document.getElementById('raindrops').classList.add('hidden');
 	}
 </script>
 
@@ -68,5 +70,7 @@ li a.normal:hover {
 experience working with HTML, CSS and Javascript. This is an 
 independant project that I'll be working on throughout the summer 
 until I find an internship.</p>
-
+<!--<img 
+src="https://68.media.tumblr.com/978eea5319e8010a6c43ce6a8bc5bb60/tumblr_o3bnr9ofTR1uz8mpno1_500.gif">
+-->
 </html>
