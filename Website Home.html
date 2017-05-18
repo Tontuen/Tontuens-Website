@@ -1,39 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <style>
-ul.menu {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: black;
-}
-
-ul {
-	font-family: Arial;
-}
-
-li a.menu {
-	float: left;
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 15px 15px;
-	text-decoration: none;
-}
-
-li a.menu:hover {
-	background-color: #FF0000;
-}
-
-.hidden {
-	display: none;
-}
-
-.hidden:hover {
-	display: inline;
-}
 
 body {
 	background-image: url('http://i.imgur.com/vkPjr9O.jpg');
@@ -42,21 +11,38 @@ body {
 
 p {
 	color: white;
-	font-family: Arial;
 }
+
 </style>
+
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
-<ul class="menu">
-  <li><a class="menu" href="Website Home.html">Home</a></li>
-  <li><a class="menu" href="index.html">About</a></li>
-  <li><a class="menu" href="Website Changelog.html">Changelog</a></li>
-</ul>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<ul class="nav navbar-nav">
+			<li><a class="menu" href="Website Home.html">Home</a></li>
+			<li><a class="menu" href="index.html">About</a></li>
+			<li><a class="menu" href="Website Changelog.html">Changelog</a></li>
+		</ul>
+	</div>
+</nav>
+
+<div class="container-fluid" style="margin-top:60px">
 <p>This is a website made by me to get some
 experience working with HTML, CSS and Javascript. This is an 
 independant project that I'll be working on throughout the summer 
 until I find an internship.</p>
+</div>
+
+</body>
 
 </html>

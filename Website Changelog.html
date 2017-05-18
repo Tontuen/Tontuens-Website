@@ -1,45 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <style>
-ul.menu {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: black;
-}
-
-ul {
-	font-family: Arial;
-	color: white;
-}
-
-li a.menu {
-	float: left;
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 15px 15px;
-	text-decoration: none;
-}
-
-li a.menu:hover {
-	background-color: #FF0000;
-}
-
-li {
-	color: white;
-}
-
-.hidden {
-	display: none;
-}
-
-.hidden:hover {
-	display: inline;
-}
-
 body {
 	background-image: url('http://i.imgur.com/vkPjr9O.jpg');
 	background-size: cover;
@@ -47,41 +10,65 @@ body {
 
 p {
 	color: white;
-	font-family: Arial;
+}
+
+ul {
+	color: white;
 }
 </style>
+
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
-<ul class="menu">
-  <li><a class="menu" href="Website Home.html">Home</a></li>
-  <li><a class="menu" href="index.html">About</a></li>
-  <li><a class="menu" href="Website Changelog.html">Changelog</a></li>
-</ul>
-<p>This is the website changelog. I'll be keeping a log of
-changes everyday that I work on the website.</p>
 
-<p><b>May 16 2017</b></p>
-<ul>
-	<li>Made HTML files using Notepad++ to test code in Chrome</li>
-	<li>Designed the basics of the website. Navigation bar started
-	with Home and About. The About section resembles my resume
-	because thats one of the main purposes I chose to create this
-	website.</li>
-</ul>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<ul class="nav navbar-nav">
+			<li><a class="menu" href="Website Home.html">Home</a></li>
+			<li><a class="menu" href="index.html">About</a></li>
+			<li><a class="menu" href="Website Changelog.html">Changelog</a></li>
+		</ul>
+	</div>
+</nav>
 
-<p></b>May 17 2017</b></p>
-<ul>
-	<li>Uploaded files to GitHub pages. This took longer than
-	expected since it was basically my first time using Github.
-	Took me a bit to figure out how everything was set up.</li>
-	<li>Added a starry night background to the Home page</li>
-	<li>Created this changelog</li>
-	<li>Made some Javascript functions to show and hide pictures
-	when a button is clicked, but decided to remove that for now.</li>
-	<li>Planning on keeping the About page without a background since
-	it's easier to read that way. Also since it's basically my resume, 
-	it should be kept clean.</li>
-</ul>
+<div class="container-fluid" style="margin-top:60px">
+	<p>This is the website changelog. I'll be keeping a log of changes everyday that 
+	I work on the website.</p>
+
+	<p><b>May 16 2017</b></p>
+	<ul>
+		<li>Made HTML files using Notepad++ to test code in Chrome</li>
+		<li>Designed the basics of the website. Navigation bar started with Home and 
+		About. The About section resembles my resume because thats one of the main 
+		purposes I created this website.</li>
+	</ul>
+
+	<p><b>May 17 2017</b></p>
+	<ul>
+		<li>Uploaded files to GitHub pages. This took longer than expected since it 
+		was basically my first time using Github. Took me a bit to figure out how 
+		everything was set up.</li>
+		<li>Added a starry night background to the Home page</li>
+		<li>Created this changelog</li>
+		<li>Planning on keeping the About page without a background since it's 
+		easier to read that way. Also since it's basically my resume, it should be 
+		kept clean.</li>
+	</ul>
+	
+	<p><b>May 18 2017</b></p>
+	<ul>
+		<li>Used the Bootstrap Navigation Bar and Collapse feature to redesign the 
+		website. I must say, it looks a lot better with the collapsible panels.</li>
+	</ul>
+</div>
+
+</body>
+
 </html>
