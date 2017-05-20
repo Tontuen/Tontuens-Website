@@ -37,10 +37,73 @@ p {
 </nav>
 
 <div class="container-fluid" style="margin-top:60px">
-<p>Hello, my name is Jerry and this is a website I made to get some experience 
-working with HTML, CSS, Javascript and Bootstrap. This is an  independant project 
-that I'll be working on throughout the summer until I find an internship.<br><br>
-You can contact me through the email on my GitHub profile, I'll respond when I can.</p>
+	<p>Hello, my name is Jerry and this is a website I made to get some experience 
+	working with HTML, CSS, Javascript and Bootstrap. This is an  independant project 
+	that I'll be working on throughout the summer until I find an internship.
+	<br><br>
+	You can contact me through the email on my GitHub profile, I'll respond when I 
+	can.</p>
+	<br><br>
+	<p>This is a minigame I made in Javascript. The goal is to guess what number is 
+	going to be displayed the next time you press the button. It is based on a 
+	regular 6-sided die, so it'll include the numbers 1 through 6. For example, the 
+	first click might give 4, the next might give 7, then 13, then 18 and so on. 
+	Basically, everytime you click the button, it'll add a random number from 1 to 6 
+	to the current number. The game will stop if the number is higher than 100. 
+	You win if your guess matches the next number. Good luck and have fun.</p>
+	
+	<p>Enter your number here: </p><input id="userInput"></input>
+    <button onclick="checkNumber()">Submit</button><br>
+	<p id="userNumber" value="userNumber"></p>
+	
+    <script>
+    function checkNumber() {
+		var userInput = document.getElementById("userInput").value;
+        if (Math.floor(userInput) < 100) {
+			document.getElementById("userNumber").innerHTML = 
+			"You have entered: " + userInput;		
+		}
+        else {
+			document.getElementById("userNumber").innerHTML = 
+			"This is not a valid input";
+		}
+    }
+    </script>
+	
+	<script>
+	var x = 0;
+	function rollDice() {
+		if (x == 0) {
+			x = Math.floor((Math.random() * 6) + 1);
+			document.getElementById("number").innerHTML = x;
+		}
+		else {
+			x = x + Math.floor((Math.random() * 6) + 1);
+			document.getElementById("number").innerHTML = x;
+		}
+	}
+	</script>
+
+	<button onclick="rollDice(); checkGuess()">Roll the dice</button>
+	<p id="number" value="number"></p>
+	
+	<script>
+	function checkGuess() {
+		var userNumber = document.getElementById("userInput").value;
+		var number = document.getElementById("number").innerHTML;
+		if (userNumber == number) {
+			document.getElementById("match").innerHTML = 
+			"Congratulations, you guessed the right number."
+		}
+		else {
+			document.getElementById("match").innerHTML = 
+			"Too bad. Try again.";
+		}
+	}	
+	</script>
+	
+	<p id="match"></p>
+	
 </div>
 
 </body>
