@@ -65,7 +65,7 @@ p {
     <script>
     function checkNumber() {
 		var userInput = document.getElementById("userInput").value;
-        if (Math.floor(userInput) < 100) {
+        if (Math.floor(userInput) < 100 && Math.floor(userInput) !== 0) {
 			document.getElementById("userNumber").innerHTML = 
 			"You have entered: " + userInput;		
 		}
